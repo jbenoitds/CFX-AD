@@ -1,0 +1,14 @@
+# Private review notes, never published
+_review/
+
+# Python
+__pycache__/
+*.pyc
+
+# Benchmark output, written next to the scripts
+logs/
+/*.csv
+/*.npz
+/*.log
+/figure1_CO.png
+/figure1_CO.pdf

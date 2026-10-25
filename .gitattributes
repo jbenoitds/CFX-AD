@@ -1,0 +1,3 @@
+# Store every file byte-for-byte (no line-ending conversion), so the shell scripts keep
+# their Unix line endings and verify_engine.sh passes on every clone.
+* -text

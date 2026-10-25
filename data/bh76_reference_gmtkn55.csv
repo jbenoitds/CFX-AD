@@ -1,0 +1,90 @@
+# BH76 reference data, GMTKN55 (Goerigk, Hansen, Bauer, Ehrlich, Najibi, Grimme, PCCP 19, 32184 (2017))
+# Source: http://www.thch.uni-bonn.de/tc.old/downloads/GMTKN/GMTKN55/BH76ref.html   (retrieved 2026-07-27)
+# Reference level: W2-F12 ("this work" in GMTKN55); non-relativistic, ZPVE-exclusive, all-electron. kcal/mol.
+# Barrier = sum_j coef_j * E(sys_j), evaluated with the GMTKN55 geometries (BH76.tar).
+#   Example, reaction 1:  -1*E(h) - 1*E(n2o) + 1*E(n2ohts) = 17.7 kcal/mol
+# Rows 1-38 = NHTBH38 (heavy-atom transfer, SN2, unimolecular/association); rows 39-76 = HTBH38 (H transfer).
+# NOTE: rows 15/16, 19/20, 47/48, 75/76 are EXACT DUPLICATES in the GMTKN55 definition (symmetric barriers).
+#       Do NOT de-duplicate - the set is 76 entries by construction and the MAD is a plain mean over all 76.
+# pbe_dev_nodisp = GMTKN55's own (PBE result - reference), dispersion-UNCORRECTED, def2-QZVP basis.
+#   Their totals: MD = -9.11, MAD = 9.15, RMSD = 10.39.  MAD 9.15 is exactly the PBE entry in Roy 2023 Table 3,
+#   which confirms Roy copied the PBE/PBEh/TPSS/SCAN columns from GMTKN55 (def2-QZVP) rather than recomputing
+#   them at cc-pVTZ. Use this column as a PER-BARRIER harness gate, not just an MAD check.
+#   Source: http://www.thch.uni-bonn.de/tc.old/downloads/GMTKN/GMTKN55/results/BH76/PBE/result.html
+idx,sys1,sys2,sys3,coef1,coef2,coef3,ref_kcalmol,pbe_dev_nodisp
+1,h,n2o,n2ohts,-1,-1,1,17.7,-7.55
+2,oh,n2,n2ohts,-1,-1,1,82.6,-30.06
+3,h,hf,hfhts,-1,-1,1,42.1,-13.79
+4,hf,h,hfhts,-1,-1,1,42.1,-13.79
+5,h,hcl,hclhts,-1,-1,1,17.8,-8.00
+6,hcl,h,hclhts,-1,-1,1,17.8,-8.00
+7,h,ch3f,hfch3ts,-1,-1,1,30.5,-11.76
+8,hf,ch3,hfch3ts,-1,-1,1,56.9,-15.55
+9,h,f2,hf2ts,-1,-1,1,1.5,-10.82
+10,hf,f,hf2ts,-1,-1,1,104.8,-25.04
+11,ch3,clf,ch3fclts,-1,-1,1,7.1,-12.49
+12,ch3f,cl,ch3fclts,-1,-1,1,59.8,-18.32
+13,f-,ch3f,fch3fts,-1,-1,1,-0.6,-9.99
+14,ch3f,f-,fch3fts,-1,-1,1,-0.6,-9.99
+15,fch3fcomp,fch3fts,,-1,1,,13.4,-7.24
+16,fch3fcomp,fch3fts,,-1,1,,13.4,-7.24
+17,cl-,ch3cl,clch3clts,-1,-1,1,2.5,-7.29
+18,ch3cl,cl-,clch3clts,-1,-1,1,2.5,-7.29
+19,clch3clcomp,clch3clts,,-1,1,,13.5,-6.80
+20,clch3clcomp,clch3clts,,-1,1,,13.5,-6.80
+21,f-,ch3cl,fch3clts,-1,-1,1,-12.3,-9.62
+22,cl-,ch3f,fch3clts,-1,-1,1,19.8,-7.69
+23,fch3clcomp1,fch3clts,,-1,1,,3.5,-4.96
+24,fch3clcomp2,fch3clts,,-1,1,,29.6,-7.87
+25,oh-,ch3f,hoch3fts,-1,-1,1,-2.7,-11.10
+26,ch3oh,f-,hoch3fts,-1,-1,1,17.6,-10.29
+27,hoch3fcomp2,hoch3fts,,-1,1,,11.0,-9.18
+28,hoch3fcomp1,hoch3fts,,-1,1,,47.7,-4.10
+29,h,n2,hn2ts,-1,-1,1,14.6,-9.39
+30,hn2,hn2ts,,-1,1,,10.9,-1.89
+31,h,co,hcots,-1,-1,1,3.2,-4.95
+32,hco,hcots,,-1,1,,22.8,1.62
+33,h,c2h4,c2h5ts,-1,-1,1,2.0,-2.13
+34,c2h5,c2h5ts,,-1,1,,42.0,-1.73
+35,ch3,c2h4,c3h7ts,-1,-1,1,6.4,-4.79
+36,c3h7,c3h7ts,,-1,1,,33.0,-3.31
+37,hcn,hcnts,,-1,1,,48.1,-2.46
+38,hnc,hcnts,,-1,1,,33.0,-2.33
+39,h,hcl,RKT01,-1,-1,1,6.1,-5.55
+40,H2,cl,RKT01,-1,-1,1,8.0,-9.15
+41,oh,H2,RKT02,-1,-1,1,5.2,-11.19
+42,H2O,h,RKT02,-1,-1,1,21.6,-8.10
+43,ch3,H2,RKT03,-1,-1,1,11.9,-7.90
+44,CH4,h,RKT03,-1,-1,1,15.0,-5.67
+45,oh,CH4,RKT04,-1,-1,1,6.3,-11.52
+46,H2O,ch3,RKT04,-1,-1,1,19.5,-10.57
+47,h,H2,RKT06,-1,-1,1,9.7,-5.95
+48,h,H2,RKT06,-1,-1,1,9.7,-5.95
+49,oh,NH3,RKT07,-1,-1,1,3.4,-15.07
+50,H2O,NH2,RKT07,-1,-1,1,13.7,-14.56
+51,hcl,ch3,RKT08,-1,-1,1,1.8,-7.35
+52,cl,CH4,RKT08,-1,-1,1,6.8,-8.72
+53,oh,C2H6,RKT09,-1,-1,1,3.5,-12.09
+54,H2O,C2H5,RKT09,-1,-1,1,20.4,-9.56
+55,f,H2,RKT10,-1,-1,1,1.6,-13.93
+56,hf,h,RKT10,-1,-1,1,33.8,-9.18
+57,O,CH4,RKT11,-1,-1,1,14.4,-14.42
+58,oh,ch3,RKT11,-1,-1,1,8.9,-9.33
+59,h,PH3,RKT12,-1,-1,1,2.9,-4.56
+60,H2,PH2,RKT12,-1,-1,1,24.7,-6.33
+61,h,oh,RKT14,-1,-1,1,10.9,-1.82
+62,H2,O,RKT14,-1,-1,1,13.2,-9.04
+63,h,H2S,RKT16,-1,-1,1,3.9,-4.99
+64,H2,HS,RKT16,-1,-1,1,17.2,-7.67
+65,O,hcl,RKT17,-1,-1,1,10.4,-20.51
+66,oh,cl,RKT17,-1,-1,1,9.9,-16.78
+67,NH2,ch3,RKT18,-1,-1,1,8.9,-8.15
+68,NH,CH4,RKT18,-1,-1,1,22.0,-11.25
+69,NH2,C2H5,RKT19,-1,-1,1,9.8,-6.80
+70,NH,C2H6,RKT19,-1,-1,1,19.4,-11.68
+71,C2H6,NH2,RKT20,-1,-1,1,11.3,-9.76
+72,C2H5,NH3,RKT20,-1,-1,1,17.8,-7.63
+73,NH2,CH4,RKT21,-1,-1,1,13.9,-9.42
+74,NH3,ch3,RKT21,-1,-1,1,16.9,-9.07
+75,C5H8,RKT22,,-1,1,,39.7,-8.50
+76,C5H8,RKT22,,-1,1,,39.7,-8.50

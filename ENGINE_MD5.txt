@@ -1,0 +1,5 @@
+3c09f0a3ba962a0b37a00b66fa9cacef *CFXm_jax.py
+f611f4aa121a5d7b1c25f54f51dd6e94 *B03_jax.py
+01957757a13b3dae4ab5d0f6037cb253 *get_veff.py
+736368516d9e49e064d27c60ad17e08e *fock.py
+fbf107204120f02fbec0f5c3cd41bc5b *hfx_density.py

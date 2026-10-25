@@ -1,0 +1,13 @@
+CFX: self-consistent correlation-factor functional in JAX + PySCF
+Copyright 2026 Jean-Benoît Deville-Stoetzel, Pierre-Olivier Roy and Matthias Ernzerhof
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository includes hfx_density.py from DeepMind's DM21 code
+(https://github.com/google-deepmind/deepmind-research, density_functional_approximation_dm21),
+Copyright 2021 DeepMind Technologies Limited, licensed under the Apache License, Version 2.0.
+It has been modified: the logger calls are commented out.
+
+The files in data/ with "bh76" in their name are taken from the GMTKN55 database
+(L. Goerigk, A. Hansen, C. Bauer, S. Ehrlich, A. Najibi and S. Grimme,
+Phys. Chem. Chem. Phys. 2017, 19, 32184).
